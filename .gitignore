@@ -153,3 +153,6 @@ fabric.properties
 # Pyre type checker
 .pyre/
 .Rproj.user
+/papers/
+/data/raw/PET/
+/data/processed/pisco_data.nc
