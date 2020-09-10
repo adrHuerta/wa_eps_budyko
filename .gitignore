@@ -154,5 +154,6 @@ fabric.properties
 .pyre/
 .Rproj.user
 /papers/
-/data/raw/PET/
-/data/processed/pisco_data.nc
+/data/raw/
+/data/output/
+/data/processed/
