@@ -21,7 +21,7 @@ piscopet_anual = piscopet.resample(time="1Y").sum()
 
 
 # precp
-piscop = xr.open_dataset("/home/adrian/Documents/wa_budyko_datasets/netcdf/P/PISCOpd.nc")
+piscop = xr.open_dataset("./data/raw/PISCO/PISCOpd.nc")
 piscop = piscop.rename({"z":"time"})
 piscop = piscop.sel(time=slice("1981-09-01", "2016-08-31"))
 piscop = piscop.isel(time=~piscop.time.dt.strftime('%m-%d').isin("02-29"))

@@ -6,8 +6,8 @@ from pandas import date_range as pd_date_range
 exec(open("./src/hargreaves_samani.py").read())
 
 # getting data
-piscotx = xr.open_dataset("/home/adrian/Documents/wa_budyko_datasets/netcdf/T/PISCOdtx_v1.1.nc")
-piscotn = xr.open_dataset("/home/adrian/Documents/wa_budyko_datasets/netcdf/T/PISCOdtn_v1.1.nc")
+piscotx = xr.open_dataset("./data/raw/PISCO/PISCOdtx_v1.1.nc")
+piscotn = xr.open_dataset("./data/raw/PISCO/PISCOdtn_v1.1.nc")
 
 # building lat grid
 pisco_lat = xr.DataArray(np.tile(piscotx["latitude"].values, (145, 1)).transpose(),
