@@ -11,4 +11,6 @@ def hargreaves_samani(tx_i,
                 np.cos(np.radians(lat_i)) * np.cos(delta) * np.sin(W_s)
     )
 
-    return (np.sqrt((tx_i - tn_i)) * ((tx_i + tn_i) / 2 + 17.8) * Re * 0.0023)
+    response = (np.sqrt((tx_i - tn_i)) * ((tx_i + tn_i) / 2 + 17.8) * Re * 0.0023)
+
+    return np.round(response, 1)

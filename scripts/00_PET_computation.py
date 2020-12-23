@@ -41,10 +41,5 @@ for year in range(1981, 2017):
                    output_core_dims=[["time"]],
                    output_dtypes=['float64']).\
         transpose("time", "latitude", "longitude").\
+        to_dataset(name="pet").\
         to_netcdf("./data/raw/PET/" + str(year) + ".nc")
-
-
-
-
-
-
